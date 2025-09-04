@@ -1,0 +1,30 @@
+#clases {
+    max-width: 1200px; margin: 40px auto; padding: 0 20px; text-align: center;
+  
+    h2 { font-size: 2rem; margin-bottom: 30px; }
+  
+    .clases-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px;
+  
+      @include respond-to(tablet) { grid-template-columns: repeat(2, 1fr); }
+      @include respond-to(mobile) { grid-template-columns: 1fr; }
+    }
+  
+    .clase-card {
+      background: $color-card; border-radius: $radius; padding: 15px; text-align: center;
+      display: flex; flex-direction: column; align-items: center;
+  
+      img { width: 100%; height: 180px; object-fit: cover; border-radius: $radius; margin-bottom: 10px; }
+      h3 { margin-bottom: 10px; }
+  
+      .btn-pink { @extend %btnBase; }
+    }
+  }
+  
+  // Modales Bootstrap: oscurecemos contenido
+  .modal .modal-content {
+    background: $color-card; color: $color-text; padding: 20px; border-radius: $radius;
+    h3 { margin-top: 0; }
+    p  { margin-bottom: 0; }
+  }
+  

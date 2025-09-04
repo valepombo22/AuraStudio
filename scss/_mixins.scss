@@ -1,0 +1,32 @@
+// Breakpoints
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+
+// Mixin de media queries
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: #{$bp-mobile}) { @content; }
+  } @else if $breakpoint == tablet {
+    @media (max-width: #{$bp-tablet}) { @content; }
+  }
+}
+
+// Mixin de botón
+@mixin button($bg, $bg-hover) {
+  background: $bg;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background .3s ease;
+  &:hover { background: $bg-hover; }
+}
+
+// Placeholder para EXTEND (base de botón)
+%btnBase {
+  display: inline-block;
+  text-decoration: none;
+  @include button($color-rose, $color-rose-dark);
+}

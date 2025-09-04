@@ -1,0 +1,22 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body { overflow-x: hidden; } // evita scroll horizontal
+
+body {
+  margin: 0;
+  font-family: $font-base;
+  background: $color-bg;
+  color: $color-text;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+// Animación (requisito: una animación o transformación)
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+// Utilidad para títulos que aparezcan con animación
+.fade-up { animation: fadeUp .6s ease both; }

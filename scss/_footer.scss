@@ -1,0 +1,24 @@
+footer {
+    background: #000; color: $color-text;
+    display: flex; justify-content: center; align-items: center;
+    gap: 40px; flex-wrap: wrap; font-size: .9rem; user-select: none; padding: 15px 20px;
+  
+    .footer-redes {
+      a {
+        display: inline-block; margin: 0 10px; transition: transform .3s ease;
+        &:hover { transform: scale(1.2); }
+        img { width: 28px; height: 28px; filter: invert(100%) brightness(150%); }
+      }
+    }
+  
+    .footer-copy { white-space: nowrap; }
+  
+    @include respond-to(tablet) {
+      flex-direction: column; gap: 20px; font-size: .85rem;
+    }
+  
+    @include respond-to(mobile) {
+      font-size: .8rem; gap: 15px;
+    }
+  }
+  
